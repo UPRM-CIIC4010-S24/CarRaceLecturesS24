@@ -13,18 +13,14 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
-    if (car1.getDirection() == 1) {
-        if (car1.getXPos()+60 < ofGetWindowWidth())  {
+    if ((car1.getDirection() == 1) && (car1.getXPos()+60 < ofGetWindowWidth())) {
             car1.setXPos(car1.getXPos()+5);
-        } else {
+    } else if (car1.getDirection() == 1) {
             car1.setDirection(-1);
-        }
-    } else { // direction = -1
-        if (car1.getXPos() > 0) {
+    } else if (car1.getXPos() > 0) {
             car1.setXPos(car1.getXPos()-5);
-        } else {
+    } else {
             car1.setDirection(1);
-        }
     }
 }
 
