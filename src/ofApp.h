@@ -1,7 +1,10 @@
 #pragma once
 
 #include "ofMain.h"
+#include <vector>
 #include "Car.h"
+
+using namespace std;
 
 class ofApp : public ofBaseApp{
 
@@ -22,6 +25,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-		Car car1;
+		static const int numCars = 20;
+		vector<Car> cars;
 
 };
