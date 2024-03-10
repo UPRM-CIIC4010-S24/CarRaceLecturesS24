@@ -1,0 +1,29 @@
+CarRaceLecturesS24.sln
+CarRaceLecturesS24.vcxproj
+CarRaceLecturesS24.vcxproj.user
+CarRaceLecturesS24.vcxproj.filters
+openFrameworks-Info.plist
+.vscode/browse.db
+.vscode/browse.db-shm
+.vscode/browse.db-wal
+bin/CarRaceLecturesS24_debug.app/Contents/Info.plist
+bin/CarRaceLecturesS24_debug.app/Contents/Frameworks/libfmod.dylib
+bin/CarRaceLecturesS24_debug.app/Contents/MacOS/CarRaceLecturesS24_debug
+CarRaceLecturesS24.xcodeproj/project.pbxproj
+CarRaceLecturesS24.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+CarRaceLecturesS24.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+CarRaceLecturesS24.xcodeproj/xcshareddata/xcschemes/CarRaceLecturesS24 Debug.xcscheme
+CarRaceLecturesS24.xcodeproj/xcshareddata/xcschemes/CarRaceLecturesS24 Release.xcscheme
+obj/osx/Debug/src/Car.d
+obj/osx/Debug/src/Car.o
+obj/osx/Debug/src/main.d
+obj/osx/Debug/src/main.o
+obj/osx/Debug/src/ofApp.d
+obj/osx/Debug/src/ofApp.o
+CarRaceLecturesS24.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+obj/osx/Debug/.compiler_flags
+Project.xcconfig
+icon.rc
+config.make
+addons.make
+.DS_Store
