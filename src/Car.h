@@ -29,14 +29,14 @@ public:
         this->direction = d;
     }
 
-    Car() {
+    // Car() {
 
-        this->xPos = 0;
-        this->yPos = 0;
-        this->color = ofColor::white;
-        this->direction = 1;
+    //     this->xPos = 0;
+    //     this->yPos = 0;
+    //     this->color = ofColor::white;
+    //     this->direction = 1;
 
-    }
+    // }
 
     void draw();
 

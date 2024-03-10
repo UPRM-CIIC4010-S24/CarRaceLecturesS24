@@ -19,21 +19,44 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
+    if (raceFinished) return;
+
     for (int i = 0; i < ofApp::numCars; i++) {
+        cars[i].setColor(ofColor::yellow);
+        int moveDistance = ofRandom(5);
         if ((cars[i].getDirection() == 1) && (cars[i].getXPos() + 60 < ofGetWindowWidth())) {
-            cars[i].setXPos(cars[i].getXPos() + 5);
+            cars[i].setXPos(cars[i].getXPos() + moveDistance);
         } else if (cars[i].getDirection() == 1) {
-            cars[i].setDirection(-1);
+            raceFinished = true;
+        // Dead code from here on
         } else if (cars[i].getXPos() > 0) {
-            cars[i].setXPos(cars[i].getXPos() - 5);
+            cars[i].setXPos(cars[i].getXPos() - moveDistance);
         } else {
-            cars[i].setDirection(1);
+            raceFinished = true;
+            // cars[i].setDirection(1);
         }
     }
+    int maxPosition = 0;  // Position of leading car 
+    for (int i=1; i<ofApp::numCars; i++) {
+        if (cars[i].getXPos() > cars[maxPosition].getXPos()) {
+            maxPosition = i;
+        }
+
+    }
+    cars[maxPosition].setColor(ofColor::red);
+    
+    // for (int i=0; i<ofApp::numCars; i++) {
+    //     if (cars[i].getXPos() < 0) {
+    //         raceFinished = true;
+    //         break;
+    //     }
+    // }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+
+    //cars[maxPosition].draw();
 
     for (int i=0; i<ofApp::numCars; i++) {
         cars[i].draw();

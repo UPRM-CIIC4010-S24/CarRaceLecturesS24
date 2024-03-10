@@ -27,5 +27,6 @@ class ofApp : public ofBaseApp{
 		
 		static const int numCars = 20;
 		vector<Car> cars;
+		bool raceFinished = false;
 
 };
