@@ -7,7 +7,7 @@ void ofApp::setup(){
     int lane = 10;
     for (int i=0; i < ofApp::numCars; i++) { // Hardcoded 10
         if (i % 2 == 0) {
-            cars.push_back(new PoliceCar(0,lane,ofColor::yellow, 1));
+            cars.push_back(new PoliceCar(0,lane,ofColor::black, 1));
         } else {
             cars.push_back(new Car(0,lane,ofColor::yellow, 1));
         }
@@ -26,7 +26,7 @@ void ofApp::update(){
     if (raceFinished) return;
 
     for (int i = 0; i < ofApp::numCars; i++) {
-        cars[i]->setColor(ofColor::yellow);
+        //cars[i]->setColor(getColor());
         int moveDistance = ofRandom(5);
         if ((cars[i]->getDirection() == 1) && (cars[i]->getXPos() + 60 < ofGetWindowWidth())) {
             cars[i]->setXPos(cars[i]->getXPos() + moveDistance);
@@ -40,14 +40,7 @@ void ofApp::update(){
             // cars[i]->setDirection(1);
         }
     }
-    int maxPosition = 0;  // Position of leading car 
-    for (int i=1; i<ofApp::numCars; i++) {
-        if (cars[i]->getXPos() > cars[maxPosition]->getXPos()) {
-            maxPosition = i;
-        }
 
-    }
-    cars[maxPosition]->setColor(ofColor::red);
     
     // for (int i=0; i<ofApp::numCars; i++) {
     //     if (cars[i]->getXPos() < 0) {
@@ -65,9 +58,15 @@ void ofApp::draw(){
     for (int i=0; i<ofApp::numCars; i++) {
         cars[i]->draw();
     }
-    // car1.draw();
-    // Car(10,10,ofColor::blue).draw();
-    // Car(100,100,ofColor::red).draw();
+
+    int maxPosition = 0;  // Position of leading car 
+    for (int i=1; i<ofApp::numCars; i++) {
+        if (cars[i]->getXPos() > cars[maxPosition]->getXPos()) {
+            maxPosition = i;
+        }
+
+    }
+    cars[maxPosition]->draw(ofColor::red);
 
 }
 

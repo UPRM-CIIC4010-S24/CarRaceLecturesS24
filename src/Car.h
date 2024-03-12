@@ -39,5 +39,6 @@ public:
     // }
 
     virtual void draw();
+    virtual void draw(ofColor c);
 
 };

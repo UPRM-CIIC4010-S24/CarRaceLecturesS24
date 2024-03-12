@@ -5,7 +5,13 @@ using namespace std;
 
 void Car::draw() {
 
-    ofSetColor(color);
+    draw(getColor());
+
+}
+
+void Car::draw(ofColor c) {
+
+    ofSetColor(c);
     
     // Draw body
     ofDrawRectangle(xPos+0,yPos+10,60,10);
