@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include <vector>
-#include "Car.h"
+#include "Vehicle.h"
 
 using namespace std;
 
@@ -26,7 +26,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
 		static const int numCars = 15;
-		vector<Car*> cars;
+		vector<Vehicle*> cars;
 		bool raceFinished = false;
 
 };

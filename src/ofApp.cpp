@@ -1,13 +1,17 @@
 #include "ofApp.h"
+#include "Car.h"
 #include "PoliceCar.h"
+#include "Truck.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
     int lane = 10;
     for (int i=0; i < ofApp::numCars; i++) { // Hardcoded 10
-        if (i % 2 == 0) {
+        if (i % 3 == 0) {
             cars.push_back(new PoliceCar(0,lane,ofColor::black, 1));
+        } else if (i % 3 == 1) {
+            cars.push_back(new Truck(0,lane,ofColor::black, 1));
         } else {
             cars.push_back(new Car(0,lane,ofColor::yellow, 1));
         }
